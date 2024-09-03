@@ -3,6 +3,8 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import grainImage from "@/assets/images/grain.jpg";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -38,5 +40,26 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+  <div className="py-16">
+    <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
+    Happy Clients</p>
+    <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+          What Clients Say About Me</h2>
+    <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
+    Dont Just take my word for it. See what clients say about me
+    </p>
+    <div className="flex flex-col gap-4 py-6">
+    {testimonials.map(testimony =>(
+      <div key={testimony.name} className="flex py-5 px-6 items-center rounded-3xl bg-white/5 mx-16 my-4 outline outline-white/20 outline-offset-0 max-w-md">
+        <Image src={testimony.avatar} alt="" className="" />
+        <div className="flex flex-col">
+        <h3>{testimony.name}</h3>
+        <p>{testimony.position}</p>
+        <p className="text-white/60 mt-4 max-w-md mx-auto">{testimony.text}</p>
+        </div>
+      </div>
+    ))}
+    </div>
+  </div>);
 };
