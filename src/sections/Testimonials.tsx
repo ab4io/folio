@@ -5,6 +5,7 @@ import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
+import {TestimonialsCard } from "@/components/TestimonialsCard";
 
 const testimonials = [
   {
@@ -12,30 +13,35 @@ const testimonials = [
     position: "Marketing Manager @ TechStartups",
     text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
     avatar: memojiAvatar1,
+    id: "0",
   },
   {
     name: "Olivia Green",
     position: "Head of Design @ GreenLeaf",
     text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
     avatar: memojiAvatar2,
+    id: "1",
   },
   {
     name: "Daniel White",
     position: "CEO @ InnovateCo",
     text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
     avatar: memojiAvatar3,
+    id: "2",
   },
   {
     name: "Emily Carter",
     position: "Product Manager @ GlobalTech",
     text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
     avatar: memojiAvatar4,
+    id: "3",
   },
   {
     name: "Michael Brown",
     position: "Director of IT @ MegaCorp",
     text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
     avatar: memojiAvatar5,
+    id: "4",
   },
 ];
 
@@ -49,17 +55,15 @@ export const TestimonialsSection = () => {
     <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
     Dont Just take my word for it. See what clients say about me
     </p>
-    <div className="flex flex-col gap-4 py-6">
-    {testimonials.map(testimony =>(
-      <div key={testimony.name} className="flex py-5 px-6 items-center rounded-3xl bg-white/5 mx-16 my-4 outline outline-white/20 outline-offset-0 max-w-md">
-        <Image src={testimony.avatar} alt="" className="" />
-        <div className="flex flex-col">
-        <h3>{testimony.name}</h3>
-        <p>{testimony.position}</p>
-        <p className="text-white/60 mt-4 max-w-md mx-auto">{testimony.text}</p>
-        </div>
-      </div>
-    ))}
+    {testimonials.map( testimony =>(
+    <div key={testimony.id} className="overflow-hidden py-6 px-6">
+    <TestimonialsCard
+     name={testimony.name}
+     position={testimony.position}
+     text={testimony.text}
+     avatar={testimony.avatar}
+    />
     </div>
+    ))}
   </div>);
 };
