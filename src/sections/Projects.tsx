@@ -81,7 +81,7 @@ export const ProjectsSection = () => {
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
-                  <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl tracking-widest bg-gradient-to-r from-secondary to-primary text-transparent bg-clip-text">{project.title}</h3>
+                  <h3 className="font-serif font-bold text-2xl mt-2 md:mt-5 md:text-4xl tracking-widest bg-gradient-to-r from-secondary to-primary text-transparent bg-clip-text">{project.title}</h3>
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (

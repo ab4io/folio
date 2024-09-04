@@ -23,21 +23,23 @@ export const TestimonialsCard = (
       <div className=" w-full relative max-w-md">
         <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-secondary to-primary transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
         <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-          <div className="flex gap-1 items-center justify-center">
-            <div className="flex items-center justify-center size-60">
-              <Image src={avatar} alt="" />
-            </div>
-            <div className="-px-2">
-              <h1 className="font-bold text-.5xl text-white mb-4 relative z-50">
-                {name}
-              </h1>
-              <h2>{position}</h2>
-              <p className="font-normal text-sm text-slate-500 mb-2 relative z-50">
-                {text}
-              </p>
+          <div className="flex flex-col gap-1 items-center justify-center">
+          <p className="font-normal text-sm text-gray-400 mb-2 relative z-50 p-1">
+              {text}
+            </p>
+            <div className="flex p-1 items-center">
+              <div className="flex items-center justify-center size-40">
+                <Image src={avatar} alt="" />
+              </div>
+              <div>
+                <h1 className="font-semibold text-.5xl text-gray-200 mb-4 relative z-50">
+                  {name}
+                </h1>
+                <h2 className="font-semibold text-.5xl text-gray-200">{position}</h2>
+              </div>
             </div>
           </div>
-          <Meteors number={20} />
+          <Meteors number={50} />
         </div>
       </div>
     </div>

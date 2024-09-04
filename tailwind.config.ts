@@ -40,7 +40,8 @@ const config: Config = {
       },
       colors : {
         "primary": "#C78557",
-        "secondary": "#41C5CD"
+        "secondary": "#41C5CD",
+        "anotherone": "#04071D",
       },
     },
   },

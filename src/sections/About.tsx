@@ -7,26 +7,26 @@ const experiences = [
   {
     job: "Software Engineer",
     company: "Omshitu-Joy",
-    text: "",
-    icon: ""
+    text: "Helped out withboth front-end and back-end projects",
+    icon: devPic,
   },
   {
     job: "Software Engineer",
     company: "Omshitu-Joy",
     text: "",
-    icon: "",
+    icon: devPic,
   },
   {
     job: "Software Engineer",
     company: "Omshitu-Joy",
     text: "",
-    icon: "",
+    icon: devPic,
   },
   {
     job: "Software Engineer",
     company: "Omshitu-Joy",
     text: "",
-    icon: "",
+    icon: devPic,
   }
 ]
 
@@ -39,13 +39,16 @@ export const AboutSection = () => {
       </div>
     <div className="">
       <h1 className="font-semibold justify-center items-center tracking-widest bg-gradient-to-r from-secondary to-primary
-     text-center text-3xl md:text-5xl bg-clip-text text-transparent">My Work Experience</h1>
+     text-center text-3xl md:text-5xl bg-clip-text text-transparent p-2">My Work Experience</h1>
      {experiences.map(experience => (
-      <div key={experience.job} className="flex flex-col md:grid-cols-2 lg:grid-cols-2 md:w-md lg:w-md justify-center container bg-gray-800 rounded-3xl outline outline-white/30 p-6 m-6">
-        <Image src={devPic} width={100} height={100} alt="" />
-        <h2>Software Engineer</h2>
+      <div key={experience.job} className="flex justify-between bg-gray-800 rounded-3xl outline outline-white/30 p-6 m-6 gap-2 lg:grid-rows-2">
+        <Image className="ml-6" src={experience.icon} width={60} height={60} alt="" />
+        <div>
+        <h2 className="mr-6">{experience.job}</h2>
+        <p>{experience.text}</p>
+        </div>
       </div>
-      ))};
+      ))}
     </div>
-    </>);
+    </>)
 };
