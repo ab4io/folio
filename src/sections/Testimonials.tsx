@@ -5,7 +5,7 @@ import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
-import {TestimonialsCard } from "@/components/TestimonialsCard";
+import { TestimonialsCard } from "@/components/TestimonialsCard";
 
 const testimonials = [
   {
@@ -47,23 +47,25 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-  <div className="py-16">
-    <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
-    Happy Clients</p>
-    <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-          What Clients Say About Me</h2>
-    <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
-    Dont Just take my word for it. See what clients say about me
-    </p>
-    {testimonials.map( testimony =>(
-    <div key={testimony.id} className="overflow-hidden py-6 px-6">
-    <TestimonialsCard
-     name={testimony.name}
-     position={testimony.position}
-     text={testimony.text}
-     avatar={testimony.avatar}
-    />
-    </div>
-    ))}
-  </div>);
+    <div className="py-16" id="testimonials">
+      <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
+        Happy Clients</p>
+      <h2 className="font-serif text-3xl md:text-5xl text-center mt-6 font-semibold justify-center items-center tracking-widest bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+        What Clients Say About Me</h2>
+      <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
+        Dont Just take my word for it. See what clients say about me
+      </p>
+      <div className="flex">
+        {testimonials.map(testimony => (
+          <div key={testimony.id} className="relative overflow-hidden animate-scroll">
+            <TestimonialsCard
+              name={testimony.name}
+              position={testimony.position}
+              text={testimony.text}
+              avatar={testimony.avatar}
+            />
+          </div>
+        ))}
+      </div>
+    </div>);
 };

@@ -31,3 +31,6 @@
     display: flex;
     animation: scroll 20s linear infinite;
   }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }

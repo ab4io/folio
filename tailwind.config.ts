@@ -38,6 +38,10 @@ const config: Config = {
           },
         },
       },
+      colors : {
+        "primary": "#C78557",
+        "secondary": "#41C5CD"
+      },
     },
   },
   plugins: [],

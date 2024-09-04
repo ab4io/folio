@@ -15,9 +15,9 @@ export const HeroOrbit = ({
                     height: `${size}px`,
                 }}>
                 <div className='inline-flex animate-spin [animation-duration:5s]'
-                style={{
-                    transform: `rotate(${rotation * -1}deg)`,
-                }}>
+                    style={{
+                        transform: `rotate(${rotation * -1}deg)`,
+                    }}>
                     {children}
                 </div>
             </div>
