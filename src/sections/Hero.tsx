@@ -4,6 +4,7 @@ import grainImage from '@/assets/images/grain.jpg';
 import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg'
 import { HeroOrbit } from '@/components/HeroOrbit';
+import AvatarComp from '@/components/avatar';
 export const HeroSection = () => {
   return (
     <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
@@ -18,16 +19,16 @@ export const HeroSection = () => {
         <div className='size-[1020px] hero-ring'></div>
         <div className='size-[1220px] hero-ring'></div>
         <HeroOrbit size={800} rotation={-72}>
-          <StarIcon className='size-28 text-primary' />
+          <StarIcon className='size-28 text-secondary' />
         </HeroOrbit>
         <HeroOrbit size={550} rotation={20}>
-          <StarIcon className="size-12 text-primary" />
+          <StarIcon className="size-12 text-secondary" />
         </HeroOrbit>
         <HeroOrbit size={590} rotation={98}>
           <StarIcon className="size-8 text-primary" />
         </HeroOrbit>
         <HeroOrbit size={430} rotation={-14}>
-          <SparkleIcon className="size-8 text-primary" />
+          <SparkleIcon className="size-8 text-secondary" />
         </HeroOrbit>
         <HeroOrbit size={440} rotation={79}>
           <SparkleIcon className="size-5 text-primary" />
@@ -58,6 +59,7 @@ export const HeroSection = () => {
               alt='Person'
               className='object-cover'
             />
+            <AvatarComp />
           </div>
           <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
             <div className='bg-secondary size-2.5 rounded-full'></div>
@@ -68,18 +70,20 @@ export const HeroSection = () => {
           <h1 className='font-serif text-3xl md:text-5xl mt-8 font-bold tracking-widest bg-gradient-to-r from-secondary to-primary text-center bg-clip-text text-transparent'>
             Building Execeptional User Experiences
           </h1>
+          <p className='mt-4 text-center text-white/60 md:text-lg '>Hey👋, I&apos;m Ayalkbet
+          </p>
           <p className='mt-4 text-center text-white/60 md:text-lg'>I specialize in transforming designs into
             functional, high-performing web applications. Lets discuss your next project.
           </p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
           <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
-            <span className='font-semibold'>Explore My Work</span>
+            <span className='font-semibold z-10'>Explore My Work</span>
             <ArrowDown className='size-4' />
           </button>
           <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
             <span>👋</span>
-            <span className='font-semibold'>Lets Connect</span>
+            <span className='font-semibold z-10'>Lets Connect</span>
           </button>
         </div>
       </div>

@@ -36,13 +36,6 @@ const testimonials = [
     avatar: memojiAvatar4,
     id: "3",
   },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
-    id: "4",
-  },
 ];
 
 export const TestimonialsSection = () => {
@@ -55,17 +48,22 @@ export const TestimonialsSection = () => {
       <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
         Dont Just take my word for it. See what clients say about me
       </p>
-      <div className="flex">
-        {testimonials.map(testimony => (
-          <div key={testimony.id} className="relative overflow-hidden animate-scroll">
-            <TestimonialsCard
-              name={testimony.name}
-              position={testimony.position}
-              text={testimony.text}
-              avatar={testimony.avatar}
-            />
-          </div>
-        ))}
+      <div className="">
+        <div className="flex flex-col md:grid md:grid-col-2 lg:grid lg:grid-cols-2 items-center justify-center">
+          {testimonials.map((testimony) => (
+            <div
+              key={testimony.id}
+              className=" min-w-[300px] px-4 py-6"
+            >
+              <TestimonialsCard
+                name={testimony.name}
+                position={testimony.position}
+                text={testimony.text}
+                avatar={testimony.avatar}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>);
 };
