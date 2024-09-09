@@ -4,6 +4,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from '@/assets/images/grain.jpg';
+import homeTenalink from "@/assets/images/main.png";
 import Image from "next/image";
 
 const portfolioProjects = [
@@ -42,6 +43,18 @@ const portfolioProjects = [
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
+  },
+  {
+    company: "TenaLink",
+    year: "2023",
+    title: "Doctor Patient Communication Platform",
+    results: [
+      { title: "Built it from scratch" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: homeTenalink,
   },
 ];
 
