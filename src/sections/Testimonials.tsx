@@ -53,8 +53,8 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimony) => (
             <div
               key={testimony.id}
-              className=" min-w-[300px] px-4 py-6"
-            >
+              className=" min-w-[300px] p-2 md:p-4"
+              >
               <TestimonialsCard
                 name={testimony.name}
                 position={testimony.position}
