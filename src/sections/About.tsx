@@ -3,8 +3,6 @@ import devPic from "@/assets/images/dev.png";
 import omshitu from "@/assets/images/image.png";
 import grainImage from "@/assets/images/grain.jpg";
 import { TimelineDemo } from "@/components/TimelineDemo";
-import GitHubCalendar from "react-github-calendar";
-
 
 const experiences = [
   {
@@ -71,10 +69,6 @@ export const AboutSection = () => {
       </div>
       <div className="flex flex-col justify-center items-center pb-2">
       <h1>Days I code</h1>
-      <GitHubCalendar 
-      username="ab4io"
-      showWeekdayLabels 
-      theme={minimalTheme}/>
       </div>
     </>)
 };
