@@ -33,6 +33,7 @@ const slugs = [
   "androidstudio",
   "sonarqube",
   "figma",
+  "python",
 ];
 
 export default function Skills() {

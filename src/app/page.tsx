@@ -16,7 +16,6 @@ export default function Home() {
       <ProjectsSection />
       <TapeSection />
       <TestimonialsSection />
-      <AboutSection />
       <Journey />
       <Skills />
       <Footer />

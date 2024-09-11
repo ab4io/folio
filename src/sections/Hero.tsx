@@ -5,7 +5,9 @@ import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg'
 import { HeroOrbit } from '@/components/HeroOrbit';
 import AvatarComp from '@/components/avatar';
+import { StatusWork } from '@/components/StatusWork';
 export const HeroSection = () => {
+  const isAvailable = true
   return (
     <div className='py-32 md:py-48 lg:py-60 relative overflow-x-clip z-0'>
       <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom, transparent, black_10%, black_70%, transparent)] -z-10'>
@@ -51,9 +53,9 @@ export const HeroSection = () => {
       </div>
       <div className="container ">
         <div className='flex flex-col items-center'>
-          <div className='rounded-full w-20 h-20 overflow-hidden outline outline-secondary'>
+          <div className='rounded-full w-20 h-20 overflow-hidden outline outline-lime-400 outline-offset-2'>
             <Image
-              src={'/abio-icon.ico'}
+              src={'/abio.ico'}
               width={80}
               height={80}
               alt='Person'
@@ -62,8 +64,7 @@ export const HeroSection = () => {
             <AvatarComp />
           </div>
           <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
-            <div className='bg-secondary size-2.5 rounded-full'></div>
-            <div className='text-sm font-medium'>Available for new projects</div>
+            <StatusWork isAvailable={isAvailable} />
           </div>
         </div>
         <div className='max-w-lg mx-auto'>

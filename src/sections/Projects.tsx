@@ -9,6 +9,18 @@ import Image from "next/image";
 
 const portfolioProjects = [
   {
+    company: "TenaLink",
+    year: "2023",
+    title: "Doctor Patient Communication Platform",
+    results: [
+      { title: "Built it from scratch" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: homeTenalink,
+  },
+  {
     company: "Acme Corp",
     year: "2022",
     title: "Dark Saas Landing Page",
@@ -43,18 +55,6 @@ const portfolioProjects = [
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
-  },
-  {
-    company: "TenaLink",
-    year: "2023",
-    title: "Doctor Patient Communication Platform",
-    results: [
-      { title: "Built it from scratch" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: homeTenalink,
   },
 ];
 
