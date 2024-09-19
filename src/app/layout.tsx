@@ -14,14 +14,12 @@ const calistoga = Calistoga({
 
 export const metadata: Metadata = {
   title: "abakiya",
-  description: "portfolio webapp",
+  description: "portfolio",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  children, }: Readonly<{
+  children: React.ReactNode;}>) {
   return (
     <html lang="en">
       <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-950 text-white antialiased font-sans")}>

@@ -23,13 +23,13 @@ export function StatusWork({ isAvailable = true }) {
     status === Status[0].Available ? 'bg-lime-400' : 'bg-red-600'
   return (
     <p>
-      <span className="inline-flex items-center px-2 py-0 text-xs font-semibold rounded-md pointer-events-auto body-primary box-gen">
-        <span className="mr-1.5 flex h-3 w-3 items-center">
+      <span className="inline-flex items-center px-2 py-0 text-xm text-gray-400 font-semibold rounded-md pointer-events-auto body-primary box-gen">
+        <span className="mr-1.5 flex h-4 w-4 items-center">
           <span
-            className={`absolute inline-flex w-2 h-2 rounded-full opacity-75 animate-ping ${bgColorClass}`}
+            className={`absolute inline-flex w-3 h-3 rounded-full opacity-75 animate-ping ${bgColorClass}`}
           ></span>
           <span
-            className={`relative inline-flex w-2 h-2 rounded-full ${bgColorClass}`}
+            className={`relative inline-flex w-3 h-3 rounded-full ${bgColorClass}`}
           ></span>
         </span>
         {status.name}

@@ -30,21 +30,21 @@ const experiences = [
     icon: devPic,
   }]
 
-  const explicitTheme = {
-    light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
-    dark: ['#383838', '#4D455D', '#7DB9B6', '#F5E9CF', '#E96479'],
-  };
+const explicitTheme = {
+  light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
+  dark: ['#383838', '#4D455D', '#7DB9B6', '#F5E9CF', '#E96479'],
+};
 
-  const minimalTheme = {
-    "light": [
-      "hsl(0, 0%, 92%)",
-      "rebeccapurple"
-    ],
-    "dark": [
-      "hsl(0, 0%, 22%)",
-      "hsl(225,92%,77%)"
-    ]
-  };
+const minimalTheme = {
+  "light": [
+    "hsl(0, 0%, 92%)",
+    "rebeccapurple"
+  ],
+  "dark": [
+    "hsl(0, 0%, 22%)",
+    "hsl(225,92%,77%)"
+  ]
+};
 
 export const AboutSection = () => {
   return (
@@ -57,7 +57,7 @@ export const AboutSection = () => {
      text-center text-3xl md:text-5xl bg-clip-text text-transparent p-2">My Work Experience</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {experiences.map(experience => (
-          <div key={experience.job} className="flex justify-center bg-gray-900 rounded-3xl outline outline-white/30 p-6 m-6 mx-10 lg:mx-20 gap-6 lg:grid-rows-2">
+          <div key={experience.job} className="boxgen">
             <Image className="ml-6" src={experience.icon} width={60} height={60} alt="" />
             <div>
               <h2 className="mr-6">{experience.job}</h2>
@@ -68,7 +68,7 @@ export const AboutSection = () => {
           </div>))}
       </div>
       <div className="flex flex-col justify-center items-center pb-2">
-      <h1>Days I code</h1>
+        <h1>Days I code</h1>
       </div>
     </>)
 };

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/util";
+import { cn } from "@/lib/utils";
 import React from "react";
 
 export const Meteors = ({
@@ -26,7 +26,6 @@ export const Meteors = ({
             animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
           }}
         >
-
         </span>
       ))}
     </>
